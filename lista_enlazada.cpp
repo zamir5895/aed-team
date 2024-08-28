@@ -170,11 +170,34 @@ public:
             anterior = actual;
             actual = siguiente;
         }
-        return anterior;
+        head = anterior;
+    }
+    void printlista(){
+        if(isEmpty()){
+            std::cout<<"LIsta vacia"<<'\n';
+            return;
+        }
+        Nodo<T>* aux = head;
+        while(aux != nullptr){
+            std::cout<<aux->dato<<" ";
+            aux = aux->siguiente;
+        }
+        std::cout<<'\n';
     }
 
 };
 
 int main() {
     ListaEnlazada<int> lista;
+    if(lista.isEmpty()){
+        std::cout<<"lista vacia"<<'\n';
+    }
+    lista.push_front(3);
+    lista.push_back(4);
+    lista.push_back(6);
+    lista.push_back(7);
+    lista.push_any(8,3);
+    lista.printlista();
+    lista.reverse();
+    lista.printlista();
 }
