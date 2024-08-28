@@ -160,6 +160,18 @@ public:
             pop_front();
         }
     }
+    void reverse(){
+        Nodo<T>* actual = head;
+        Nodo<T>* anterior = nullptr;
+        Nodo<T>* siguiente;
+        while(actual != nullptr){
+            siguiente = actual->siguiente;
+            actual->siguiente = anterior;
+            anterior = actual;
+            actual = siguiente;
+        }
+        return anterior;
+    }
 
 };
 
