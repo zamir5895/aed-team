@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/AyED/forward_list/cmake-build-debug"
+			"value" : "d:/AyED/aed-team/forward_list/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/AyED/forward_list/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "D:/AyED/aed-team/forward_list/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/AyED/forward_list"
+			"value" : "D:/AyED/aed-team/forward_list"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1291,7 +1291,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/AyED/forward_list/cmake-build-debug"
+			"value" : "D:/AyED/aed-team/forward_list/cmake-build-debug"
 		},
 		{
 			"name" : "forward_list_IS_TOP_LEVEL",
@@ -1315,7 +1315,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/AyED/forward_list"
+			"value" : "D:/AyED/aed-team/forward_list"
 		}
 	],
 	"kind" : "cache",

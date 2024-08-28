@@ -782,8 +782,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "D:/AyED/forward_list/cmake-build-debug",
-		"source" : "D:/AyED/forward_list"
+		"build" : "D:/AyED/aed-team/forward_list/cmake-build-debug",
+		"source" : "D:/AyED/aed-team/forward_list"
 	},
 	"version" : 
 	{
