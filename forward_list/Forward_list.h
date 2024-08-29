@@ -102,6 +102,65 @@ public:
             temp->next = newNode;
         }
     }
+
+    T operator[](int pos) {
+        Node<T>* temp = head;
+        for(int i = 0; i < pos; i++){
+            temp = temp->next;
+        }
+        return temp->data;
+    }
+
+    bool empty() {
+        return head == nullptr;
+    }
+
+    int size() {
+        if(empty()) {
+            return 0;
+        }
+
+        Node<T>* temp = head;
+        int count = 1;
+        while(temp->next != nullptr) {
+            temp = temp->next;
+            count++;
+        }
+        return count;
+    }
+
+    void clear() {
+        while(!empty()){
+            pop_back();
+        }
+    }
+
+    void reverse() {
+        if(head == nullptr || head->next == nullptr) {
+            return;
+        }
+
+        Node<T>* prev = nullptr;
+        Node<T>* act = head;
+        Node<T>* next;
+
+        while(act != nullptr) {
+            next = act->next;
+            act->next = prev;
+            prev = act;
+            act = next;
+        }
+        head = prev;
+    }
+
+    void print() {
+        Node<T>* temp = head;
+        while(temp->next != nullptr) {
+            cout << temp->data << " ";
+            temp = temp->next;
+        }
+        cout << temp->data << " " << endl;
+    }
 };
 
 #endif //FORWARD_LIST_FORWARD_LIST_H
