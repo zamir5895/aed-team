@@ -85,6 +85,7 @@ public:
             throw std::runtime_error("Lista vacia");
         }
         Nodo<T>* aux = head;
+        
         T valor = aux->dato;
         head = head->siguiente; 
         delete aux;
