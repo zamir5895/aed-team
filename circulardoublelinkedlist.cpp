@@ -8,10 +8,10 @@ struct Nodo{
 };
 template <typename T = int>
 class ListaCircularDoble{
-    private:
-    Nodo<T> *cabeza;
-    NOdo<T> *cola;
-    public:
+private:
+    Nodo<T>* cabeza;
+    Nodo<T>* cola;
+public:
     ListaCircularDoble(): cabeza(nullptr), cola(nullptr){};
 
     bool isEmpty(){
@@ -141,7 +141,7 @@ class ListaCircularDoble{
             delete aux;
         }
     }
-    void size(){
+    int size(){
         if(isEmpty()){
             return 0;
         }
@@ -153,7 +153,7 @@ class ListaCircularDoble{
         }while(aux != cabeza);
         return cont;
     }
-    void reverse{
+    void reverse(){
         if(isEmpty){
             throw std::runtime_error("Lista vacia");    
         }
@@ -183,5 +183,23 @@ class ListaCircularDoble{
 
 
 int main(){
+    ListaCircularDoble<int> lista;
+    lista.push_back(1);
+    lista.push_back(2);
+    lista.push_front(0);
+    lista.push_any(3, 3);
+    lista.push_any(4, 4);
+    lista.push_any(5, 5);
+    lista.push_any(2, 6);
+    lista.print();
+    lista.pop_any(6);
+    lista.print();
+    lista.pop_front();
+    lista.print();
+    lista.pop_back();
+    std::cout << lista.size() << '\n';
+    lista.print();
+    lista.reverse();
+    lista.print();
     return 0;
 }
