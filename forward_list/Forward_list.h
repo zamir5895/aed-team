@@ -27,6 +27,10 @@ public:
 
     Forward_list(Node<T>* head) : head(head) {}
 
+    Node<T>* getHead() {
+        return head;
+    }
+
     T front() {
         return head->data;
     }
