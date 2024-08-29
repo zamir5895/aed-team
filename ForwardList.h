@@ -25,11 +25,14 @@ private:
 
 public:
     Forward_list() : head(nullptr) {}
+    Forward_list(Node<T>* head) : head(head){}
 
     T front() {
         return head->data;
     }
-
+    Node<T>* getHead() {
+        return head;
+    }
     T back() {
         Node<T>* temp = head;
         while(temp->next != nullptr) {
@@ -141,6 +144,32 @@ public:
 
         head = prev;
     }
+
+    void deleteValue(T value) {
+        Node<T>* temp = head;
+        Node<T>* prev = nullptr;
+
+        while (temp != nullptr) {
+            if (temp->data == value) {
+                prev->next = temp->next;
+                delete temp;
+                temp = prev->next;
+            } else {
+                prev = temp;
+                temp = temp->next;
+            }
+        }
+    }
+
+    void print() {
+        Node<T>* temp = head;
+        while(temp != nullptr) {
+            cout << temp->data << " ";
+            temp = temp->next;
+        }
+        cout << endl;
+    }
+
 };
 
 

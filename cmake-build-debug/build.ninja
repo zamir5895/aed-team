@@ -55,6 +55,12 @@ build CMakeFiles/aed_team.dir/main.cpp.obj: CXX_COMPILER__aed_team_unscanned_Deb
   OBJECT_DIR = CMakeFiles\aed_team.dir
   OBJECT_FILE_DIR = CMakeFiles\aed_team.dir
 
+build CMakeFiles/aed_team.dir/EC2.cpp.obj: CXX_COMPILER__aed_team_unscanned_Debug C$:/Users/ASUS/Documents/aed-team/EC2.cpp || cmake_object_order_depends_target_aed_team
+  DEP_FILE = CMakeFiles\aed_team.dir\EC2.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\aed_team.dir
+  OBJECT_FILE_DIR = CMakeFiles\aed_team.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target aed_team
@@ -63,7 +69,7 @@ build CMakeFiles/aed_team.dir/main.cpp.obj: CXX_COMPILER__aed_team_unscanned_Deb
 #############################################
 # Link the executable aed_team.exe
 
-build aed_team.exe: CXX_EXECUTABLE_LINKER__aed_team_Debug CMakeFiles/aed_team.dir/main.cpp.obj
+build aed_team.exe: CXX_EXECUTABLE_LINKER__aed_team_Debug CMakeFiles/aed_team.dir/main.cpp.obj CMakeFiles/aed_team.dir/EC2.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\aed_team.dir
