@@ -116,13 +116,9 @@ public:
     }
 
     int size() {
-        if(empty()) {
-            return 0;
-        }
-
         Node<T>* temp = head;
-        int count = 1;
-        while(temp->next != nullptr) {
+        int count = 0;
+        while(temp != nullptr) {
             temp = temp->next;
             count++;
         }
@@ -155,11 +151,11 @@ public:
 
     void print() {
         Node<T>* temp = head;
-        while(temp->next != nullptr) {
+        while(temp != nullptr) {
             cout << temp->data << " ";
             temp = temp->next;
         }
-        cout << temp->data << " " << endl;
+        cout << endl;
     }
 };
 
