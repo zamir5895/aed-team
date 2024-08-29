@@ -25,6 +25,8 @@ private:
 public:
     Forward_list() : head(nullptr) {}
 
+    Forward_list(Node<T>* head) : head(head) {}
+
     T front() {
         return head->data;
     }
@@ -109,6 +111,10 @@ public:
             temp = temp->next;
         }
         return temp->data;
+    }
+
+    void select_delete() {
+
     }
 
     bool empty() {
