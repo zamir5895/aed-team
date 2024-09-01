@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    Forward_list<int> myList;
+    Forward_list myList;
 
     myList.push_back(1);
     myList.push_back(2);

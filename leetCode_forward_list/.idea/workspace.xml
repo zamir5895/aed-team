@@ -9,7 +9,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80bd7a26-6eeb-4dc0-be92-8bd087ff868e" name="Changes" comment="" />
+    <list default="true" id="80bd7a26-6eeb-4dc0-be92-8bd087ff868e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../forward_list/Forward_list.h" beforeDir="false" afterPath="$PROJECT_DIR$/../forward_list/Forward_list.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,8 +34,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "C/C++ File.Delete Notes.cpp.executor": "Run",
+    "C/C++ File.Linked List Cycle II.cpp.executor": "Run",
     "C/C++ File.Linked List Cycle.cpp (1).executor": "Run",
     "C/C++ File.Linked List Cycle.cpp.executor": "Run",
+    "C/C++ File.mcd.cpp.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -50,7 +56,13 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="C/C++ File.Linked List Cycle II.cpp">
+  <component name="RunManager" selected="C/C++ File.mcd.cpp">
+    <configuration name="Delete Notes.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$/Delete Nodes" PASS_PARENT_ENVS_2="true" PROJECT_NAME="leetCode_forward_list" TARGET_NAME="Delete Notes.cpp" CONFIG_NAME="Delete Notes.cpp">
+      <option name="sourceFile" value="Delete Nodes\Delete Notes.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Linked List Cycle II.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$/Linked List Cycle II" PASS_PARENT_ENVS_2="true" PROJECT_NAME="leetCode_forward_list" TARGET_NAME="Linked List Cycle II.cpp" CONFIG_NAME="Linked List Cycle II.cpp">
       <option name="sourceFile" value="Linked List Cycle II\Linked List Cycle II.cpp" />
       <method v="2">
@@ -69,8 +81,16 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="mcd.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$/MCD" PASS_PARENT_ENVS_2="true" PROJECT_NAME="leetCode_forward_list" TARGET_NAME="mcd.cpp" CONFIG_NAME="mcd.cpp">
+      <option name="sourceFile" value="MCD\mcd.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="C/C++ File.mcd.cpp" />
+        <item itemvalue="C/C++ File.Delete Notes.cpp" />
         <item itemvalue="C/C++ File.Linked List Cycle.cpp" />
         <item itemvalue="C/C++ File.Linked List Cycle.cpp" />
       </list>
@@ -85,7 +105,9 @@
       <option name="presentableId" value="Default" />
       <updated>1724900788932</updated>
       <workItem from="1724900790057" duration="378000" />
-      <workItem from="1724901182542" duration="2151000" />
+      <workItem from="1724901182542" duration="2264000" />
+      <workItem from="1724946071585" duration="307000" />
+      <workItem from="1724946682833" duration="6712000" />
     </task>
     <servers />
   </component>

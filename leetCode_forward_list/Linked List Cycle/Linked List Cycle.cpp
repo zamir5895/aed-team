@@ -1,14 +1,11 @@
+#include "../Forward_list.h"
 #include <iostream>
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
 
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
+        if (head == nullptr || head->next == nullptr) return false;
+
         ListNode* slow = head;
         ListNode* fast = head;
 
@@ -26,31 +23,29 @@ public:
 };
 
 int main() {
-    // Crear nodos
-    ListNode* node1 = new ListNode(3);
-    ListNode* node2 = new ListNode(2);
-    ListNode* node3 = new ListNode(0);
-    ListNode* node4 = new ListNode(-4);
-
-    // Conectar nodos para formar una lista con ciclo: 3 -> 2 -> 0 -> -4 -> 2 ...
-    node1->next = node2;
-    node2->next = node3;
-    node3->next = node4;
-    node4->next = node2; // Crear el ciclo aquí
-
     Solution solution;
 
-    if(solution.hasCycle(node1)) {
-        std::cout << "La lista tiene un ciclo." << std::endl;
-    } else {
-        std::cout << "La lista no tiene un ciclo." << std::endl;
-    }
+    Forward_list list;
+    list.push_back(3);
+    list.push_back(2);
+    list.push_back(0);
+    list.push_back(-4);
 
-    // Liberar la memoria (aunque en este caso, la lista tiene un ciclo, así que la liberación completa es complicada)
-    delete node1;
-    delete node2;
-    delete node3;
-    delete node4;
+    list.getNode(3)->next = list.getNode(1);
+
+    std::cout << std::boolalpha << solution.hasCycle(list.getHead()) << endl;
+
+    Forward_list list2;
+    list2.push_back(1);
+    list2.push_back(2);
+    list2.getNode(1)->next = list.getNode(0);
+
+    std::cout << std::boolalpha << solution.hasCycle(list2.getHead()) << endl;
+
+    Forward_list list3;
+    list3.push_back(1);
+
+    std::cout << std::boolalpha << solution.hasCycle(list3.getHead()) << endl;
 
     return 0;
 }
