@@ -16,6 +16,9 @@ public:
         head = nullptr;
         cola = nullptr;
     }
+    bool empty(){
+        return head == nullptr;
+    }
     T front(){
         if(head == nullptr){
             throw std::runtime_error("Lista vacia");
@@ -53,20 +56,21 @@ public:
     }
     void push_any(T valor, int pos){
         Nodo<T>* nuevonodo = new Nodo<T>{valor, nullptr, nullptr};
-        if(head == nullptr){
-            head = nuevonodo;
-            cola = nuevonodo;
-            return;
+        if(head == nullptr || head->siguiente == nullptr){
+            return push_front(valor);
         }
         Nodo<T>* aux = head;
+        if(pos == 0){
+            return push_front(valor);
+        }
         for(int i = 0; i < pos; i++){
             aux = aux->siguiente;
         }
         if(aux == nullptr){
             delete nuevonodo;
             throw std::runtime_error("Posicion no valida");
-
         }
+        
         aux->anterior->siguiente = nuevonodo;
         nuevonodo->anterior = aux->anterior;
         aux->anterior = nuevonodo;
@@ -78,7 +82,14 @@ public:
         }
         Nodo<T>* aux = head;
         T valor = aux->dato;
-        head = head->siguiente; 
+        head = head->siguiente;
+        delete head->anterior;
+
+        if(head != nullptr){
+            head->anterior = nullptr;
+        }else{
+            cola = nullptr;
+        }
         delete aux;
         return valor;
     }
@@ -86,9 +97,17 @@ public:
         if(head == nullptr){
             throw std::runtime_error("Lista vacia");
         }
+        if(head->siguiente == nullptr){
+            T valor = head->dato;
+            delete head;
+            head = nullptr;
+            return valor;
+        }
         Nodo<T>* aux = cola;
         T valor = aux->dato;
         cola = cola->anterior;
+        delete cola->siguiente;
+        cola->siguiente = nullptr;
         delete aux;
         return valor;
     }
@@ -109,6 +128,7 @@ public:
         T valor = aux->dato;
         aux->anterior->siguiente = aux->siguiente;
         aux->siguiente->anterior = aux->anterior;
+
         delete aux;
         return valor;
     }
@@ -122,6 +142,7 @@ public:
             aux = aux->siguiente;
             cont++;
         }
+        //for(Nodo<T>* aux = head; aux != nullptr; aux = aux->siguiente;cont++;)
         return cont;
     }
     T operator[](int pos){
