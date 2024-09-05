@@ -1,0 +1,15 @@
+# ninja log v5
+10	1119	7466015689378157	CMakeFiles/forward_list.dir/main.cpp.obj	f40253f2050bbcf2
+15	3271	7466015853602917	CMakeFiles/ForwardListTests.dir/test_forward_list.cpp.obj	b53e66e7db9df96f
+1120	1341	7466015691478372	forward_list.exe	6c62be7f06fbec3a
+16	20788	7465996562744232	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	d62370417bbfdbcb
+25	4735	7465996402564669	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	178f960a5a383f92
+20794	27227	7465996627484242	lib/libgtest.a	1c2fce93259c309f
+27227	27387	7465996629104001	lib/libgtest_main.a	1ede36c9e80f3af1
+3272	10319	7466015923962898	ForwardListTests.exe	b4df32f969e53ff
+15	2549	7472079975978977	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	ea6ac69cfa35d0bc
+4	2702	7472079977531465	CMakeFiles/Doubly_Linked_List.dir/test_doubly_linked_list.cpp.obj	a5b44d46745324cd
+11	11473	7472080065027121	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	b64256cfe60cae59
+11473	15088	7472080101411615	lib/libgtest.a	1c2fce93259c309f
+15089	15160	7472080102131611	lib/libgtest_main.a	1ede36c9e80f3af1
+15160	19632	7472080146780276	Doubly_Linked_List.exe	a656aa87f6b9303f
