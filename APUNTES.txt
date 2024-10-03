@@ -1,0 +1,51 @@
+APUNTES
+
+void preorder(TreeNode* root) {
+    if (root == NULL) return;
+    A.push_back(root);  // Procesa el nodo actual primero
+    preorder(root->left);  // Recorre el subárbol izquierdo
+    preorder(root->right);  // Recorre el subárbol derecho
+}
+
+void postorder(TreeNode* root) {
+    if (root == NULL) return;
+    postorder(root->left);  // Recorre el subárbol izquierdo
+    postorder(root->right);  // Recorre el subárbol derecho
+    A.push_back(root);  // Procesa el nodo actual al final
+}
+
+#include <queue>
+
+void bfs(TreeNode* root) {
+    if (root == NULL) return;
+    
+    std::queue<TreeNode*> q;
+    q.push(root);
+    
+    while (!q.empty()) {
+        TreeNode* node = q.front();
+        q.pop();
+        A.push_back(node);  // Procesa el nodo actual
+        
+        if (node->left != NULL) q.push(node->left);  // Encola el subárbol izquierdo
+        if (node->right != NULL) q.push(node->right);  // Encola el subárbol derecho
+    }
+}
+
+#include <stack>
+
+void dfs(TreeNode* root) {
+    if (root == NULL) return;
+    
+    std::stack<TreeNode*> s;
+    s.push(root);
+    
+    while (!s.empty()) {
+        TreeNode* node = s.top();
+        s.pop();
+        A.push_back(node);  // Procesa el nodo actual
+        
+        if (node->right != NULL) s.push(node->right);  // Apila el subárbol derecho
+        if (node->left != NULL) s.push(node->left);  // Apila el subárbol izquierdo
+    }
+}
